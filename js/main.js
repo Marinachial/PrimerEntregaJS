@@ -28,7 +28,7 @@ while(opcion != "ESC"){
 
 //SEGUNDA ENTREGA:
 
-let nombreUsuario = prompt ("¡Hola! ¿Cuál es tu nombre?")
+/* let nombreUsuario = prompt ("¡Hola! ¿Cuál es tu nombre?")
 
 function saludar (nombre){
 	alert ("Hola " + nombre + " bienvenidx!");
@@ -59,10 +59,10 @@ function ReservaFinal(parametro1, parametro2){
 	} else	alert("Entonces elegiste lookearte con " + parametro1 + " el día " + parametro2);
 }
 
-ReservaFinal(opcion, diaReserva)
+ReservaFinal(opcion, diaReserva) */
 
 //SWITCH DE OPCION
-let opcion2= prompt("Ingresa la opción que quieras seleccionar.\n1-Corte \n2-Tintura \n3-Color Fantasia \n4-Nutricion \n5-Anti-Frizz \n6-Gift Card \nPara salir ingresa SALIR");
+/* let opcion2= prompt("Ingresa la opción que quieras seleccionar.\n1-Corte \n2-Tintura \n3-Color Fantasia \n4-Nutricion \n5-Anti-Frizz \n6-Gift Card \nPara salir ingresa SALIR");
 if (opcion2 == "SALIR" || opcion2 == "salir") alert ("No seleccionaste ninguna opción. ¡Que tengas buen día!");
 
 while(opcion2 != "SALIR"){
@@ -124,3 +124,29 @@ while(diaReserva2 != "SALIR"){
 	diaReserva2 = prompt("Ingresa la opción que quieras seleccionar.\nA-Lunes \nB-Martes \nC-Miercoles \nD-Jueves \nE-Viernes \nF-Sabado \nPara salir ingresa SALIR");
 	if (diaReserva2 == "SALIR" || diaReserva2 == "salir") alert ("Elegiste salir.. ¡Que tengas buen día!");
 }
+ */
+
+// DESAFIO COMPLEMENTARIO - Incorporar Arrays
+
+let turnosClientes = []
+
+function agregarTurnos(){
+
+let reserva1 = {}
+let que= prompt("Ingresa la opción que quieras seleccionar.\nCorte \nTintura \nColor Fantasia \nNutricion \nAnti-Frizz \nGift Card");
+let diaTurno= prompt("Ingresa la opción que quieras seleccionar.\nA-Lunes \nB-Martes \nC-Miercoles \nD-Jueves \nE-Viernes \nF-Sabado");
+let medioPago = prompt("Ingresa la forma de pago: \nTranferencia \nMercado Pago \nEfectivo")
+
+reserva1.look = que
+reserva1.dia = diaTurno
+reserva1.formaPago = medioPago
+return reserva1
+}
+
+let turnoElegido = agregarTurnos()
+turnosClientes.push(turnoElegido)
+turnoElegido = agregarTurnos()
+turnosClientes.push(turnoElegido)
+
+let mapeo = turnosClientes.map(value => value)
+console.log(mapeo);
