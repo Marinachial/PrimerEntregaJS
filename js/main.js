@@ -1,3 +1,62 @@
+// PRE ENTREGA
+
+let looks = [
+	{id:1, nombre: "Corte", precio: 1200, demora: "40min"},
+	{id:2, nombre: "Tintura", precio: 2500, demora: "3hs"},
+	{id:3, nombre: "Color Fantasía", precio: 3500, demora: "4hs"},
+	{id:4, nombre: "Nutricion", precio: 900, demora: "60min"},
+	{id:5, nombre: "Antifrizz", precio: 1000, demora: "45min"},
+	{id:6, nombre: "Gift Card", precio: 2500, demora: "3hs"},
+]
+
+
+
+function agregarTurno(){
+	let turno1 = []
+	let que= prompt("Ingresa la opción que quieras seleccionar.\nCorte \nTintura \nColor Fantasia \nNutricion \nAnti-Frizz \nGift Card");
+	if (que == "Gift Card" || que == "GIFT CARD") alert("Elegiste hacer un regalo");
+	let diaTurno= prompt("Ingresa la opción que quieras seleccionar.\nA-Lunes \nB-Martes \nC-Miercoles \nD-Jueves \nE-Viernes \nF-Sabado");
+	let medioPago = prompt("Ingresa la forma de pago: \nTranferencia \nMercado Pago \nEfectivo")
+	
+	turno1.look = que
+	turno1.dia = diaTurno
+	turno1.formaPago = medioPago
+	return turno1
+}
+
+let primerTurno = agregarTurno()
+looks.push(primerTurno)
+
+let turnoElegido2 = looks.map(value => value)
+console.log(turnoElegido2)
+
+
+//ARRAYS
+
+/* let turnosClientes = []
+
+function agregarTurnos(){
+
+let reserva1 = {}
+let que= prompt("Ingresa la opción que quieras seleccionar.\nCorte \nTintura \nColor Fantasia \nNutricion \nAnti-Frizz \nGift Card");
+let diaTurno= prompt("Ingresa la opción que quieras seleccionar.\nA-Lunes \nB-Martes \nC-Miercoles \nD-Jueves \nE-Viernes \nF-Sabado");
+let medioPago = prompt("Ingresa la forma de pago: \nTranferencia \nMercado Pago \nEfectivo")
+
+reserva1.look = que
+reserva1.dia = diaTurno
+reserva1.formaPago = medioPago
+return reserva1
+}
+
+let turnoElegido = agregarTurnos()
+turnosClientes.push(turnoElegido)
+turnoElegido = agregarTurnos()
+turnosClientes.push(turnoElegido)
+
+let mapeo = turnosClientes.map(value => value)
+console.log(mapeo); */
+
+
 // algoritmo con un condicional
 /* let entrada = prompt("Ingrese su nombre");
 console.log(entrada)
@@ -126,27 +185,3 @@ while(diaReserva2 != "SALIR"){
 }
  */
 
-// DESAFIO COMPLEMENTARIO - Incorporar Arrays
-
-let turnosClientes = []
-
-function agregarTurnos(){
-
-let reserva1 = {}
-let que= prompt("Ingresa la opción que quieras seleccionar.\nCorte \nTintura \nColor Fantasia \nNutricion \nAnti-Frizz \nGift Card");
-let diaTurno= prompt("Ingresa la opción que quieras seleccionar.\nA-Lunes \nB-Martes \nC-Miercoles \nD-Jueves \nE-Viernes \nF-Sabado");
-let medioPago = prompt("Ingresa la forma de pago: \nTranferencia \nMercado Pago \nEfectivo")
-
-reserva1.look = que
-reserva1.dia = diaTurno
-reserva1.formaPago = medioPago
-return reserva1
-}
-
-let turnoElegido = agregarTurnos()
-turnosClientes.push(turnoElegido)
-turnoElegido = agregarTurnos()
-turnosClientes.push(turnoElegido)
-
-let mapeo = turnosClientes.map(value => value)
-console.log(mapeo);
