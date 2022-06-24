@@ -20,7 +20,7 @@
                             
         <input id="search" type="text" class="input" placeholder="Buscar producto">
                     
-        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+        <button id="boton-carrito"><i class="bi bi-bag-heart-fill"></i><span id="contadorCarrito">0</span></button>
     </header>              
         <div class="seleccion">
             <select id="selecPrecios">
@@ -39,7 +39,7 @@
                     <div class="card-image">
                         <img src="./img/turnos8.jpg" class="img-fluid rounded-start">
                             <span class="card-titlesobre2">Gift Card</span>
-                            <a id="boton${el.id}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">Seleccionar</i></a>
+                            <a id="boton" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">Seleccionar</i></a>
                 </div>
                         <div class="card-content">
                             <p class="desc">Podés elegir una gift con todas las opciones anteriores, para regalar un corte de pelo, una tintura, una nutrición, etc. ¡Y se la enviamos directamente a quién vos quieras!</p>
@@ -49,22 +49,46 @@
                 </div>  -->
     </main>
 
-    <div class="modal-contenedor">
+<!--   <div class="modal-contenedor">
         <div class="modal-carrito">
                 <h3>Carrito</h3>
                 <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
                 <div id="carrito-contenedor">
-                <!-- <div class="productoEnCarrito">
-                    <p>Buzo 1</p>
+                 <div class="productoEnCarrito">
+                    <p>Corte</p>
                     <p>Precio: $1200</p>
-                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-                    </div>  -->
+                    <button class="boton-eliminar"><i class="bi bi-trash"></i></button>
+                    </div> 
                 </div>
                     <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
                     <div id="terminar" style="display: flex; justify-content: flex-end;"></div>
                 </div>
         </div>
-    </div>
+    </div>  -->
+
+     <div class="modal" tabindex="-1" class="modal-contenedor"></div> 
+        <div class="modal-dialog" class="modal-carrito">
+          <div class="modal-content"  id="carrito-contenedor">
+            <div class="modal-header">
+              <h3 class="modal-title">Carrito</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="carritoCerrar"></button>
+            </div>
+<!--             <div class="modal-body" class="productoEnCarrito">
+                <p>Corte</p>
+                <p>Precio: $1200</p>
+                <p>Modal body text goes here.</p>
+                <button class="boton-eliminar"><i class="bi bi-trash"></i></button> -->
+                <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                <div id="terminar" style="display: flex; justify-content: flex-end;"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Guardar cambios</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <script src="./js/main.js"></script>
     <script src="./js/modal.js"></script>
 </body>
