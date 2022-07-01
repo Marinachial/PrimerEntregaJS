@@ -1,9 +1,9 @@
+.IniSesion{
+	text-decoration: none;
+	color: #84b7bd;
+}
 .card{
 	background-color: #f7f7f7;
-    @media (min-width:280px) and (max-width: 399px){
-	    height: auto;
-	    width: 280px;
-    }
 }
 .desc{
     font-size: 1rem;
