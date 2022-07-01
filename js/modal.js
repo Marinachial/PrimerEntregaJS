@@ -1,4 +1,4 @@
-const carritoAbrir = document.getElementById('boton-carrito');
+/* const carritoAbrir = document.getElementById('boton-carrito');
 const carritoCerrar = document.getElementById('carritoCerrar');
 
 const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
@@ -15,4 +15,4 @@ modalCarrito.addEventListener('click',(e)=>{
 })
 contenedorModal.addEventListener('click', ()=>{
     carritoCerrar.click()
-})
+}) */
