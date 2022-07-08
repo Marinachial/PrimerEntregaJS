@@ -23,13 +23,17 @@ class Usuario{
 function validar(usuarioRegistrado, contraseñaRegistrada,reContraseña,email){
 
         if(usuarioRegistrado == "" || contraseñaRegistrada == "" ||reContraseña == "" || email == ""){
-        alert('debes llenar todos los campos')
+            Swal.fire('debes llenar todos los campos')
     }
         else if(contraseñaRegistrada.length < 4){
-        alert('la contraseña debe ser mayor a 4 digitos')
+            Swal.fire('la contraseña debe ser mayor a 4 digitos')
     }
         else if(contraseñaRegistrada != reContraseña){
-        alert('las contraseñas no coinciden')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'las contraseñas no coinciden',
+              })  
     }
     else{
         datos.push(new Usuario(usuarioRegistrado,contraseñaRegistrada,email))
@@ -59,12 +63,31 @@ function ingresar(){
         if((recuperoLocalS[0].usuario == usuario) && (recuperoLocalS[0].pass == contraseña)){
             document.getElementById('user').value = "";
             document.getElementById('pass').value="";
-            alert('inicio de sesion correcto')
+
+            Swal.fire({
+                title: 'Inicio de sesion correcto',
+                icon: 'success',
+                showClass: {
+                  popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                  popup: 'animate__animated animate__fadeOutUp'
+                }
+              })
         }else{
-            alert('No pudimos validar tus datos')
+            Swal.fire({
+                title: 'No pudimos validar tus datos',
+                icon: 'warning',
+            }   
+            )
         }
     }else{
-        alert('lo siento, algo debe estar mal!')
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo debe estar mal',
+            footer: '<a href="">Volver</a>'
+          })
     }
     
 }
